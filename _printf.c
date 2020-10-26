@@ -1,4 +1,4 @@
-B#include "holberton.h"
+#include "holberton.h"
 #include <stdio.h>
 
 int _printf(const char *format, ...)
@@ -7,6 +7,7 @@ int _printf(const char *format, ...)
   va_list arg;
  
   pt types[] = {
+    {"%", print_percent},
     {"c", print_char},
     {"s", print_string},   
     {NULL, NULL}
