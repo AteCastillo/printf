@@ -1,4 +1,4 @@
-#include "holberton.h"
+B#include "holberton.h"
 #include <stdio.h>
 
 int _printf(const char *format, ...)
@@ -29,11 +29,6 @@ if (format[i] == '%')
  total += types[j].printer(arg);
  break;
 	    }
-	  if (format [i + 1] == '%')
-	    {
-	     _put_char('%');
-	     i++;
-	    }	
 	  j++;
 	}
     }
