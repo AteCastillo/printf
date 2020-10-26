@@ -7,7 +7,6 @@ int _printf(const char *format, ...)
   va_list arg;
  
   pt types[] = {
-    {"%", print_percent},
     {"c", print_char},
     {"s", print_string},   
     {NULL, NULL}
@@ -29,6 +28,11 @@ if (format[i] == '%')
 	      flag = 1;	     
  total += types[j].printer(arg);
  break;
+	    }
+	  if (format [i + 1] == '%')
+	    {
+	     total += _put_char('%');
+	     i++;
 	    }	
 	  j++;
 	}
