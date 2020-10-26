@@ -42,9 +42,9 @@ int _strlen(char *s)
  * Return: the count of element printed
  */
 
-int print_percent(va_list args)
+int print_percent(va_list arg)
 {
-  (void)args;
+  (void)arg;
   _putchar('%');
   return (1);
 }
