@@ -20,7 +20,12 @@ int print_string(va_list arg)
   int n = 0;
   char *str;
   str = va_arg(arg, char *);
-  n = _strlen(str);
+  if (s == NULL)
+    {
+      s = "(null)"
+	}
+  
+n = _strlen(str);
 
   write(1, str, n);
   return (n);
@@ -45,6 +50,6 @@ int _strlen(char *s)
 int print_percent(va_list arg)
 {
   (void)arg;
-  _put_char('%');
+  _put_char('%');  
   return (1);
 }
