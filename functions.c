@@ -44,7 +44,7 @@ int _strlen(char *s)
 
 int print_percent(va_list arg)
 {
-  void(args);
+  (void)arg;
   _put_char('%');
   return (1);
 }
