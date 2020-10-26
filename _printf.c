@@ -31,7 +31,7 @@ if (format[i] == '%')
 	    }
 	  if (format [i + 1] == '%')
 	    {
-	     total += _put_char('%');
+	     _put_char('%');
 	     i++;
 	    }	
 	  j++;
