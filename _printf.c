@@ -16,7 +16,10 @@ int _printf(const char *format, ...)
   va_start(arg, format);
   if (!format)
     return (-1);
-  
+  if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+    {
+      return (-1);
+    }
   while (format[i] != '\0' && format)
     {  
       flag = 0;
