@@ -35,3 +35,16 @@ int _strlen(char *s)
     }
   return (b);
 }
+
+/**
+ * print_percent - print a percent
+ * @args: argument passed
+ * Return: the count of element printed
+ */
+
+int print_percent(va_list args)
+{
+  (void)args;
+  _putchar('%');
+  return (1);
+}
