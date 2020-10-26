@@ -67,12 +67,12 @@ int print_percent(va_list arg)
 
     if (number == 0)
       {
-	_putchar('0');
+	_put_char('0');
 	count = 1;
       }
     else if (number < 0)
       {
-	_putchar('-');
+	_put_char('-');
 	number = -number;
 	count = 1;
       }
@@ -83,7 +83,7 @@ int print_percent(va_list arg)
 	while (divisor > 1)
 	  {
 	    divisor /= 10;
-	    _putchar((number / divisor) +'0');
+	    _put_char((number / divisor) +'0');
 	    number %= divisor;
 	    count++;
 	  }
