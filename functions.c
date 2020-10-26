@@ -20,9 +20,9 @@ int print_string(va_list arg)
   int n = 0;
   char *str;
   str = va_arg(arg, char *);
-  if (s == NULL)
+  if (str == NULL)
     {
-      s = "(null)"
+      str = "(null)";
 	}
   
 n = _strlen(str);
