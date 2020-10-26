@@ -7,6 +7,8 @@ int _printf(const char *format, ...)
   va_list arg;
  
   pt types[] = {
+    {"i", print_int},
+    {"d", print_int},    
     {"%", print_percent},
     {"c", print_char},
     {"s", print_string},   

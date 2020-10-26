@@ -12,6 +12,7 @@ typedef struct pter
 int print_char (va_list);
 int print_percent (va_list);
 int print_string (va_list);
+int print_int (va_list);
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _put_char(char);

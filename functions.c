@@ -53,3 +53,40 @@ int print_percent(va_list arg)
   _put_char('%');  
   return (1);
 }
+
+  /**
+   * print_int - Prints an integer to standard output
+   * @args: list of variable argument
+   * Return: count of digit in number
+   */
+  int print_int(va_list args)
+  {
+    long int number, divisor, count = 0;
+
+    number = va_arg(args, int);
+
+    if (number == 0)
+      {
+	_putchar('0');
+	count = 1;
+      }
+    else if (number < 0)
+      {
+	_putchar('-');
+	number = -number;
+	count = 1;
+      }
+    if (number > 0)
+      {
+	for (divisor = 1; divisor <= number; divisor *= 10)
+	  ;
+	while (divisor > 1)
+	  {
+	    divisor /= 10;
+	    _putchar((number / divisor) +'0');
+	    number %= divisor;
+	    count++;
+	  }
+      }
+    return (count);
+  }
