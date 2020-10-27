@@ -64,6 +64,7 @@ pt types[] = {
 {"%", print_percent},
 {"s", print_string},
 {"c", print_char},
+{"b", print_binary},
 {NULL, NULL}
 };
 

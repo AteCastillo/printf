@@ -24,4 +24,5 @@ int print_int (va_list);
 int _printf(const char *format, ...);
 int _strlen(char *s);
 int _put_char(char);
+int print_binary(va_list);
 #endif
