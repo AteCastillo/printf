@@ -2,31 +2,18 @@
 #include <stdio.h>
 
 /**
- * _printf - Function to print
+ * _betty - Function to print
  * @format: Second member
- * Description: Longer description
+ * @arg: List
+ * @types: Pointer
+ * Return: _betty
  */
 
 
-int _printf(const char *format, ...)
+int _betty(const char *format, va_list arg, pt *types)
 {
 int i = 0, j = 0, flag = 0, total = 0;
-va_list arg;
-pt types[] = {
-{"i", print_int},
-{"d", print_int},
-{"%", print_percent},
-{"c", print_char},
-{"s", print_string},
-{NULL, NULL}
-};
-va_start(arg, format);
-if (!format)
-return (-1);
-if (format == NULL || (format[0] == '%' && format[1] == '\0'))
-{
-return (-1);
-}
+
 while (format[i] != '\0' && format)
 {
 flag = 0;
@@ -57,6 +44,37 @@ total++;
 }
 j = 0;
 }
+return (total);
+}
+
+/**
+ * _printf - Function to print
+ * @format: Second member
+ * Return: printf
+ */
+
+int _printf(const char *format, ...)
+{
+int total = 0;
+va_list arg;
+
+pt types[] = {
+{"i", print_int},
+{"d", print_int},
+{"%", print_percent},
+{"s", print_string},
+{"c", print_char},
+{NULL, NULL}
+};
+
+va_start(arg, format);
+if (!format)
+return (-1);
+if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+{
+return (-1);
+}
+total = _betty(format, arg, types);
 va_end(arg);
 return (total);
 }
