@@ -9,7 +9,6 @@
  * Return: _betty
  */
 
-
 int _betty(const char *format, va_list arg, pt *types)
 {
 int i = 0, j = 0, flag = 0, total = 0;
